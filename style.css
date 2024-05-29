@@ -7,11 +7,11 @@
 *{
     margin: 0;
     padding: 0;
-    font: inherit;
 }
 
 body{
     min-height: 100vh;
+    font-family: 'Asap';
 }
 
 img, picture, svg, video {
@@ -25,16 +25,47 @@ input, textarea, button, select {
 
 /* --Font Imports-- */
 
-
-
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
 
 /* --Utilities-- */
 
+:root {
+    --primary-accesent-clr: #FEFAF6;
+    --color-100: #C6A23A;
+    --color-400: #043b8f;
+    --color-700: #102C57;  
+}
 
+h1,h2,h3,h4,h5,h6{
+    font-family: "Josefin Sans", sans-serif;
+}
 
 
 /* --Header Section Styling-- */
 
+.header-navbar {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo{
+    max-width: 400px;
+}
+
+.header-navbar > ul{
+    display: flex;
+    gap: 10px;
+}
+.header-navbar > ul li{
+    list-style-type: none;
+}
+
+.header-navbar > ul li a{
+    text-decoration: none;
+    color: var(--color-700);
+}
 
 
 
