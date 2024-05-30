@@ -1,3 +1,8 @@
+/* <--Font Imports--> */
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
 /* <--General Reset--> */
 
 *,*::before,*::after {
@@ -32,16 +37,13 @@ input, textarea, button, select {
     font: inherit;
 }
 
-/* <--Font Imports--> */
-
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
-
-/* --Utilities-- */
+/* <--Utilities--> */
 
 :root {
-    --primary-accesent-clr: #FEFAF6;
-    --primary-accesent-clr-2: #fffdf5;
+    --primary-accent-clr: #FEFAF6;
+    --accent-clr: #ffe2c4;
+    --primary-accent-clr-2: #fffdf5;
+    --color-fff: #fff;
     --color-100: #C6A23A;
     --color-150: #c6a33a8f;
     --color-400: #043b8f;
@@ -55,12 +57,13 @@ input, textarea, button, select {
 /* <--Header Section Styling--> */
 
 .header-navbar{
-    --background: var(--primary-accesent-clr);
+    --background: var(--primary-accent-clr);
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
     align-items: center;
     position: fixed;
+    z-index: 20;
     left: 0;
     right: 0;
     background-color: var(--background);
@@ -81,7 +84,7 @@ input, textarea, button, select {
 
     }
     to{
-        background-color: var(--primary-accesent-clr);
+        background-color: var(--primary-accent-clr);
         height: 300px;
     }
 }
@@ -133,7 +136,7 @@ input, textarea, button, select {
 
 
 .header-infinite-carousel {
-    color: var(--primary-accesent-clr);
+    color: var(--primary-accent-clr);
     font-size: 5rem;
 }
 
@@ -219,6 +222,53 @@ input, textarea, button, select {
     line-height: 1.2;
 }
 
+
+.main-content-section-services {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-services-card-contaier {
+    background-color: var(--color-400);
+    display: flex;
+    border-radius: 20px;
+    color: var(--primary-accent-clr);
+    margin-top: 1rem;
+}
+
+.section-services-card-contaier .service-card-image{
+    margin: 20px;
+}
+.section-services-card-contaier .service-card-image img{
+    border-radius: 10px;
+
+}
+
+.section-services-card-contaier .inner-container {
+    padding: 20px;
+    display: grid;
+}
+
+.section-services-card-contaier .inner-container h2{
+    font-size: 2rem;
+}
+
+.btn-primary {
+    height: max-content;
+    max-width: fit-content;
+    padding: 1rem;
+    background-color: var(--color-100);
+    color: var(--color-fff);
+    border: 0px solid;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.service-card-sec-2 {
+    background-color: var(--accent-clr);
+}
 
 
 /* --Footer Section Styling-- */
