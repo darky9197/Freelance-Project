@@ -43,18 +43,19 @@ h1,h2,h3,h4,h5,h6{
 
 
 /* --Header Section Styling-- */
-
 .header-navbar {
-    background-color: antiquewhite;
     display: flex;
     justify-content: space-between;
+    padding: 0px 20px;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
-
 .header-logo{
     max-width: 400px;
+    cursor: pointer;
 }
-
 .header-navbar > ul{
     display: flex;
     gap: 10px;
@@ -68,6 +69,31 @@ h1,h2,h3,h4,h5,h6{
     color: var(--color-700);
 }
 
+
+.header-container{
+    min-height: 100vh;
+    background-image: url('src/Header_Files/Banner_carosel/container-ship.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: Homecarosel 3000ms infinite alternate ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes Homecarosel {
+    0%{
+        background-image: url('src/Header_Files/Banner_carosel/container-ship.jpg');
+    }
+    100%{
+        background-image: url('src/Header_Files/Banner_carosel/ship.jpg');
+    }
+}
+
+.header-infinite-carousel {
+    color: var(--primary-accesent-clr);
+    font-size: 5rem;
+}
 
 
 /* --Main Section Styling-- */
