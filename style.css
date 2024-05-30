@@ -14,9 +14,14 @@ body{
     font-family: 'Asap';
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-family: "Josefin Sans", sans-serif;
+}
+
 img, picture, svg, video {
     display: block;
     max-width: 100%;
+    height: 100%;
 }
 
 input, textarea, button, select {
@@ -32,18 +37,20 @@ input, textarea, button, select {
 
 :root {
     --primary-accesent-clr: #FEFAF6;
+    --primary-accesent-clr-2: #fffdf5;
     --color-100: #C6A23A;
     --color-400: #043b8f;
     --color-700: #102C57;  
-}
 
-h1,h2,h3,h4,h5,h6{
-    font-family: "Josefin Sans", sans-serif;
+    --shadow-clr: #b6b9bd;
+    --header-size: 3.5rem;
 }
 
 
 /* --Header Section Styling-- */
-.header-navbar {
+
+.header-navbar{
+    --background: var(--primary-accesent-clr);
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
@@ -51,44 +58,74 @@ h1,h2,h3,h4,h5,h6{
     position: fixed;
     left: 0;
     right: 0;
+    background-color: var(--background);
+    height: 100px;
+
 }
+.header-navbar *{
+    color: var(--color-700);
+}
+
+.navbarAnimation{
+    animation: nav-change;
+}
+
+@keyframes nav-change {
+    from{
+        background-color: #fefaf600;
+
+    }
+    to{
+        background-color: var(--primary-accesent-clr);
+        height: 300px;
+    }
+}
+
+
 .header-logo{
     max-width: 400px;
     cursor: pointer;
 }
+
 .header-navbar > ul{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
+
 .header-navbar > ul li{
     list-style-type: none;
 }
 
 .header-navbar > ul li a{
     text-decoration: none;
-    color: var(--color-700);
+    font-size: 1.5rem;
+    
 }
-
 
 .header-container{
     min-height: 100vh;
+    overflow-x: scroll;
+    display: flex;
+}
+.header-infinite-carousel {
+    min-width: 100vw;
     background-image: url('src/Header_Files/Banner_carosel/container-ship.jpg');
     background-size: cover;
     background-position: center;
-    animation: Homecarosel 3000ms infinite alternate ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+
 }
 
 @keyframes Homecarosel {
-    0%{
+    from{
         background-image: url('src/Header_Files/Banner_carosel/container-ship.jpg');
     }
-    100%{
+    to{
         background-image: url('src/Header_Files/Banner_carosel/ship.jpg');
     }
 }
+
 
 .header-infinite-carousel {
     color: var(--primary-accesent-clr);
@@ -96,8 +133,49 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-/* --Main Section Styling-- */
+/* <--Main Section Styling--> */
 
+
+.main-content-wrapper {
+    padding: 0px 35px;
+}
+
+.main-header {
+    font-size: var(--header-size);
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.main-content-section-aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-content-section-aboutus .aboutus-inner-container{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    /* border-radius: 10px;
+    box-shadow:2px 3px 5px var(--shadow-clr); */
+}
+
+.main-content-section-aboutus .aboutus-image{
+    max-width: 400px;
+}
+
+.main-content-section-aboutus .aboutus-inner-container > div{
+    max-width: 400px;
+}
+
+.main-content-section-aboutus .aboutus-inner-container > div p{
+    text-align: left;
+    padding: 20px;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 
 
