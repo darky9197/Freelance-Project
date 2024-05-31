@@ -10,9 +10,11 @@
         <title>KanchiEnterprises</title>
     </head>
     <body>
-        <nav class="header-navbar">
+        <nav class="header-navbar" id="nav-bar">
             <picture class="header-logo">
-                <img src="src/Header_Files/main_header+logo.png" alt="Kanchi Enterpries header logo">
+                <a href="#homeSection">
+                    <img src="src/Header_Files/main_header+logo.png" alt="Kanchi Enterpries header logo">
+                </a>
             </picture>
             <ul>
                 <li><a href="#homeSection">Home</a></li>
@@ -21,6 +23,7 @@
                 <li><a href="#contactSection">Contact</a></li>
             </ul>
         </nav>
+
         <header class="header-container" id="homeSection">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -90,6 +93,8 @@
                             </article>
                         </div>
                     </div>
+
+                    <!-- Services and Products Section -->
 
                     <div class="service-wrapper">
                         <div class="section-services-card-contaier">
@@ -176,21 +181,25 @@
                     </div>
                 </div>
             </section>
+            
+            <!-- Form Component -->
 
             <section class="main-content-section-submitionform" id="contactSection">
                 <h1 class="main-header">Get in Touch</h1>
                 <form action="#" class="form-container">
-                    <h2>SEND YOUR QUERRIES</h2>
+                    <h2>SEND US YOUR QUERRIES</h2>
                     <div class="form-inputs">
                         <input type="text" name="" placeholder="Name">
                         <input type="text" placeholder="Email">
                         <input type="text" placeholder="Mobile Number">
                         <textarea name="message" id="message" placeholder="message"></textarea>
-                        <button class="btn-primary" type="submit">Submit</button>
+                        <button class="btn-submit" type="submit">Submit</button>
                     </div>
                 </form>
             </section>
         </main>
+
+        <!-- Footer Component -->
 
         <footer class="footer-content-wrapper">
             <div class="footer-grid-wrapper">
@@ -238,8 +247,8 @@
                 <div>
                     <h1>Mails</h1>
                     <div class="padded-in">
-                        <p class="line-length-fit">info@kanchienterprises.come<br>
-                            im@kanchienterprises.com</p>
+                        <p class="line-length-fit">info@kanchienterprises.com<br>
+                            eim@kanchienterprises.com</p>
                     </div>
                 </div>
             </div>
@@ -247,7 +256,7 @@
             <div class="flex">
                 <p>	&#169; All Right Reserved</p>
                 <div>
-                    <p>Website Crafted by Pugazhendhi & team <a href="https://www.linkedin.com/in/pugazhendhi-siva/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:22px;color:white"></i></a></p>
+                    <p>Website Crafted by Pugazhendhi & Team <a href="https://www.linkedin.com/in/pugazhendhi-siva/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:22px;color:white"></i></a></p>
                 </div>
             </div>
         </footer>

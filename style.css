@@ -43,7 +43,7 @@ input, textarea, button, select {
 :root {
     --primary-accent-clr: #FEFAF6;
     --accent-clr: #eceae3;
-    --primary-accent-clr-2: #fffdf5;
+    --primary-accent-clr-2: #fffdf513;
     --color-fff: #fff;
     --color-100: #EEAF43;
     --color-150: #c6a33a8f;
@@ -58,7 +58,7 @@ input, textarea, button, select {
     --primary-font-size: 1.6rem;
     --secondary-font-size: 1.7rem;
 
-    --primary-padding: 1.3rem;
+    --primary-padding: 1.5rem;
 }
 
 .flex {
@@ -91,16 +91,17 @@ input, textarea, button, select {
     left: 0;
     right: 0;
     background-color: transparent;
-
+    transition: background-color 300ms ease,
+                color 300ms ease;
 }
 .header-navbar *{
-    color: var(--color-700);
+    color: var(--primary-accent-clr);
 }
 
-
-.header-logo{
+.header-navbar .header-logo{
     max-width: 500px;
     cursor: pointer;
+    transition: max-width 100ms ease-in;
 }
 
 .header-navbar > ul{
@@ -118,10 +119,53 @@ input, textarea, button, select {
     font-weight: 600;
 }
 
+.nav-bar-scrolled {
+    background-color: var(--background);
+    box-shadow: 2px 2px 11px #444444;
+}
+
+.nav-bar-scrolled *{
+    color: var(--color-700);
+}
+
+.nav-bar-scrolled .header-logo {
+    max-width: 240px;
+}
+.nav-bar-scrolled > ul li a {
+    font-size: 1.3rem;
+}
+
 .header-container{
+    position: relative;
     min-height: 100vh;
     display: flex;
 }
+
+.header-container::after{
+    content: 'We are one of the leading Exporters, Importers and Trading activities of  both sides and having started by vast experienced and passionate professionals, of more than two and half  decades, who offer their expertise for benefit of both sides.';
+    position: absolute;
+    font-size: 2.6rem;
+    font-weight: 700;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    text-shadow: 5px 6px 9px #202020;
+    line-height: 1.2;
+    color: var(--primary-accent-clr);
+    bottom: 20vh;
+    animation: homeBannerText 1500ms ease-in 1000ms;
+}
+
+@keyframes homeBannerText {
+    from{
+        bottom: 10vh;
+        opacity: 0;
+    }
+    to{
+        bottom: 20vh;
+        opacity: 1;
+    }
+}
+
 .header-infinite-carousel {
     min-width: 100vw;
     min-height: 100vh;
@@ -143,7 +187,7 @@ input, textarea, button, select {
 
 .main-header {
     font-size: var(--header-size);
-    padding: var(--primary-padding) 0px;
+    margin: 4rem 0px;
     color: var(--color-700);
     text-align: center;
     font-weight: 900;
@@ -267,15 +311,15 @@ input, textarea, button, select {
     z-index: -1;
     margin-top: -15px;
     background-color: var(--accent-clr);
-    padding: 2rem var(--primary-padding);
+    padding: var(--primary-padding);
     border-radius: 0px 0px 20px 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
     gap: 20px;
-    transition: padding 200ms ease-out,
-                height 200ms ease-out,
-                opacity 40ms ease-in-out;
+    transition: padding 150ms ease-in-out,
+                height 800ms ease-in-out,
+                opacity 100ms ease-in-out;
 }
 
 .hide {
@@ -326,6 +370,18 @@ input, textarea, button, select {
     border-radius: 15px;
     font-weight: 500;
 }
+.btn-submit {
+    cursor: pointer;
+    font-family: 'asap';
+    margin: 20px 0px;
+    font-size: var(--primary-font-size);
+    padding: 1.3rem 3.5rem;
+    background-color: var(--color-100);
+    color: var(--color-fff);
+    border: 0px solid;
+    border-radius: 40px;
+    font-weight: 500;
+}
 
 
 .main-content-section-submitionform {
@@ -341,13 +397,14 @@ input, textarea, button, select {
     background-color: var(--color-fff);
     border-radius: 20px;
     box-shadow:2px 3px 5px var(--shadow-clr);
+    margin-bottom: 4rem;
 }
 
 .form-container h2{
     position: relative;
     border-radius: 20px 20px 0 0;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1em 7em;
     font-size: 3rem;
     background-color: var(--color-100);
     color: var(--primary-accent-clr);
@@ -363,18 +420,23 @@ input, textarea, button, select {
 }
 
 .form-container .form-inputs input,textarea {
-    min-width: 100%;
+    border: 1px solid;
+    outline: 0px;
+    min-width: 80%;
     border-radius: 10px;
-    padding: 1rem;
-    
+    padding: var(--primary-padding);   
+}
+
+.form-container .form-inputs input,textarea::placeholder{
+    font-size: var(--primary-font-size);
+}
+
+.form-container .form-inputs textarea{
+    min-height: 300px;
 }
 /* <--Footer Section Styling--> */
 
 .footer-content-wrapper {
-    position: relative;
-    bottom: 0px;
-    left: 0;
-    right: 0;
     background-color: var(--color-1000);
     color: var(--color-fff);
     padding: 2rem;
@@ -395,9 +457,9 @@ input, textarea, button, select {
     color: var(--color-1000);
     background-color: var(--color-fff);
     padding: 1rem;
-    transition: padding 200ms ease-out,
-                height 200ms ease-out,
-                opacity 40ms ease-in-out;
+    transition: padding 250ms ease-in-out,
+                height 1000ms ease-in-out,
+                opacity 100ms ease-in-out;
 }
 .footer-faq-question{
     font-size: 1.4rem;

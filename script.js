@@ -90,12 +90,12 @@ faq_btn_2.addEventListener("click",()=>{
     const service = document.getElementById('faq-ans-2');
     if(service.classList.contains("hide")){
         service.classList.replace("hide","show");
-        faq_btn_1.textContent = "-";
+        faq_btn_2.textContent = "-";
     }
     else{
         if(service.classList.contains("show")){
             service.classList.replace("show","hide");
-            faq_btn_1.textContent = "+";
+            faq_btn_2.textContent = "+";
         }
     }
 });
@@ -106,12 +106,34 @@ faq_btn_3.addEventListener("click",()=>{
     const service = document.getElementById('faq-ans-3');
     if(service.classList.contains("hide")){
         service.classList.replace("hide","show");
-        faq_btn_1.textContent = "-";
+        faq_btn_3.textContent = "-";
     }
     else{
         if(service.classList.contains("show")){
             service.classList.replace("show","hide");
-            faq_btn_1.textContent = "+";
+            faq_btn_3.textContent = "+";
         }
     }
 });
+
+
+// <--Nav-bar Behavior change-->
+
+const header = document.getElementById('nav-bar');
+const sectionOne = document.getElementById('homeSection');
+
+const sectionOneOptions = {
+    rootMargin : "-180px 0px 0px 0px"
+};
+const sectionOneObserver = new IntersectionObserver(function(entries,sectionOneObserver){
+    entries.forEach(e =>{
+        if(!e.isIntersecting){
+            header.classList.add('nav-bar-scrolled');
+        }else{
+            header.classList.remove('nav-bar-scrolled');
+
+        }
+    });
+},sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne)
