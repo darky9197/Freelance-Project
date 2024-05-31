@@ -53,7 +53,12 @@ input, textarea, button, select {
     --color-1000: #000000;
 
     --shadow-clr: #b6b9bd;
-    --header-size: 3.6rem;
+    --header-size: 4.6rem;
+
+    --primary-font-size: 1.6rem;
+    --secondary-font-size: 1.7rem;
+
+    --primary-padding: 1.3rem;
 }
 
 .flex {
@@ -67,7 +72,10 @@ input, textarea, button, select {
 
 .line-length-fit {
     line-height: 1.5;
-    font-size: 1.3rem;
+}
+
+.pointable {
+    cursor: pointer;
 }
 
 /* <--Header Section Styling--> */
@@ -76,7 +84,7 @@ input, textarea, button, select {
     --background: var(--primary-accent-clr);
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
+    padding: 0px var(--primary-padding);
     align-items: center;
     position: fixed;
     z-index: 20;
@@ -106,13 +114,12 @@ input, textarea, button, select {
 
 .header-navbar > ul li a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: var(--primary-font-size);
     font-weight: 600;
 }
 
 .header-container{
     min-height: 100vh;
-    overflow-x: scroll;
     display: flex;
 }
 .header-infinite-carousel {
@@ -136,9 +143,10 @@ input, textarea, button, select {
 
 .main-header {
     font-size: var(--header-size);
-    padding: 10px 0px;
+    padding: var(--primary-padding) 0px;
     color: var(--color-700);
     text-align: center;
+    font-weight: 900;
 }
 
 .main-content-section-aboutus {
@@ -152,25 +160,24 @@ input, textarea, button, select {
     display: flex;
     align-items: center;
     gap: 3rem;
-    /* border-radius: 10px;
-    box-shadow:2px 3px 5px var(--shadow-clr); */
 }
 
 .main-content-section-aboutus .aboutus-image{
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .main-content-section-aboutus .aboutus-inner-container > div{
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .main-content-section-aboutus .aboutus-inner-container > div p{
     text-align: left;
-    padding: 20px;
+    padding: var(--primary-padding);
     line-height: 1.3;
-    font-size: 1.3rem;
+    font-size: var(--primary-font-size);
     font-weight: 600;
     font-family: 'josefin Sans';
+    margin: 0;
 }
 
 
@@ -196,7 +203,7 @@ input, textarea, button, select {
     content: '"';
     position: absolute;
     color: var(--color-150);
-    top: 20px;
+    top: 0px;
     right: 80px;
     z-index: 0;
     font-size: 200px;
@@ -228,29 +235,31 @@ input, textarea, button, select {
     grid-template-columns: 1fr 2fr;
     border-radius: 20px;
     color: var(--primary-accent-clr);
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     position: sticky;
 }
 
 .section-services-card-contaier .service-card-image{
-    padding: 20px;
-    max-height: 100%;
+    padding: var(--primary-padding);
 }
 .section-services-card-contaier .service-card-image img{
-    height: 100%;
+    max-height: 100%;
     object-fit: cover;
     border-radius: 10px;
-
 }
 
 .section-services-card-contaier .inner-container {
-    padding: 20px;
+    padding: var(--primary-padding);
     display: grid;
-    gap: 25px;
+    gap: 1.4rem;
 }
 
 .section-services-card-contaier .inner-container h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.section-services-card-contaier .inner-container p{
+    font-size: var(--primary-font-size);
 }
 
 .service-card-sec-2 {
@@ -258,7 +267,7 @@ input, textarea, button, select {
     z-index: -1;
     margin-top: -15px;
     background-color: var(--accent-clr);
-    padding: 1.5rem;
+    padding: 2rem var(--primary-padding);
     border-radius: 0px 0px 20px 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -307,8 +316,10 @@ input, textarea, button, select {
     cursor: pointer;
     height: max-content;
     max-width: fit-content;
+    font-family: 'asap';
     margin: 20px 0px;
-    padding: 1rem;
+    font-size: var(--primary-font-size);
+    padding: var(--primary-padding);
     background-color: var(--color-100);
     color: var(--color-fff);
     border: 0px solid;
