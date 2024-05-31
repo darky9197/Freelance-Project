@@ -41,11 +41,12 @@ input, textarea, button, select {
 
 :root {
     --primary-accent-clr: #FEFAF6;
-    --accent-clr: #ffe2c4;
+    --accent-clr: #eceae3;
     --primary-accent-clr-2: #fffdf5;
     --color-fff: #fff;
-    --color-100: #C6A23A;
+    --color-100: #d6b03c;
     --color-150: #c6a33a8f;
+    --color-200: #7B4E00;
     --color-400: #043b8f;
     --color-700: #102C57;  
 
@@ -228,6 +229,7 @@ input, textarea, button, select {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2rem;
 }
 
 .section-services-card-contaier {
@@ -235,7 +237,8 @@ input, textarea, button, select {
     display: flex;
     border-radius: 20px;
     color: var(--primary-accent-clr);
-    margin-top: 1rem;
+    margin-top: 2rem;
+    position: sticky;
 }
 
 .section-services-card-contaier .service-card-image{
@@ -249,13 +252,48 @@ input, textarea, button, select {
 .section-services-card-contaier .inner-container {
     padding: 20px;
     display: grid;
+    gap: 25px;
 }
 
 .section-services-card-contaier .inner-container h2{
     font-size: 2rem;
 }
 
+.service-card-sec-2 {
+    margin-top: -15px;
+    background-color: var(--accent-clr);
+    padding: 1.5rem;
+    border-radius: 0px 0px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap: 20px;
+}
+
+.service-card-sec-2 article {
+    text-align: center;
+    line-height: 2;
+}
+
+.service-card-sec-2 article > img{
+    aspect-ratio: 1;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.service-card-sec-2 article p{
+    color: var(--color-200);
+    font-weight: 700;
+}
+
+.service-wrapper {
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px var(--shadow-clr);
+}
+
+
 .btn-primary {
+    cursor: pointer;
     height: max-content;
     max-width: fit-content;
     padding: 1rem;
@@ -265,11 +303,6 @@ input, textarea, button, select {
     border-radius: 15px;
     font-weight: 500;
 }
-
-.service-card-sec-2 {
-    background-color: var(--accent-clr);
-}
-
 
 /* --Footer Section Styling-- */
 
