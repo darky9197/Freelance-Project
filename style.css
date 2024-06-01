@@ -43,7 +43,7 @@ input, textarea, button, select {
 :root {
     --primary-accent-clr: #FEFAF6;
     --accent-clr: #eceae3;
-    --primary-accent-clr-2: #fffdf513;
+    --primary-accent-clr-2: #fffdf315;
     --color-fff: #fff;
     --color-100: #EEAF43;
     --color-150: #c6a33a8f;
@@ -104,19 +104,26 @@ input, textarea, button, select {
     transition: max-width 100ms ease-in;
 }
 
-.header-navbar > ul{
+.header-navbar > .desk-ul{
     display: flex;
+    align-items: center;
+    margin: 0;
     gap: 50px;
 }
 
-.header-navbar > ul li{
+.header-navbar > .desk-ul li{
     list-style-type: none;
 }
 
-.header-navbar > ul li a{
+.header-navbar > .desk-ul li a{
     text-decoration: none;
     font-size: var(--primary-font-size);
     font-weight: 600;
+}
+.menu-btn-container {
+    display: none;
+    color: var(--primary-accent-clr);
+    padding: 0;
 }
 
 .nav-bar-scrolled {
@@ -131,13 +138,47 @@ input, textarea, button, select {
 .nav-bar-scrolled .header-logo {
     max-width: 240px;
 }
-.nav-bar-scrolled > ul li a {
+.nav-bar-scrolled > .desk-ul li a {
     font-size: 1.3rem;
+}
+
+.nav-bar-scrolled .menu-btn-container i{
+    color: var(--color-700);
 }
 
 .header-container{
     position: relative;
     min-height: 100vh;
+}
+
+.mobile-ul {
+    opacity: 0;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    line-height: 2;
+    font-weight: 600;
+    padding: var(--primary-padding);
+    text-align: center;
+    font-size: calc(var(--primary-font-size) + 5px);
+    width: 100%;
+    background-color: var(--primary-accent-clr-2);
+    transition: opacity 100ms ease-in;
+}
+.activate_ul{
+    opacity: 1;
+}
+.bg-for-nav{
+    background-color: var(--primary-accent-clr);
+    box-shadow: 2px 2px 11px #444444;
+}
+
+.mobile-ul li{
+    list-style-type: none;
+}
+.mobile-ul li a{
+    text-decoration: none;
 }
 
 .header-container::after{
@@ -304,7 +345,7 @@ input, textarea, button, select {
     z-index: -1;
     margin-top: -15px;
     background-color: var(--accent-clr);
-    padding: var(--primary-padding);
+    padding: 4rem var(--primary-padding);
     border-radius: 0px 0px 20px 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -322,6 +363,7 @@ input, textarea, button, select {
     opacity: 0;
 }
 .show{
+    margin: 0;
     padding: 1;
     height: 1;
     opacity: 1;
@@ -453,14 +495,17 @@ input, textarea, button, select {
     color: var(--color-1000);
     background-color: var(--color-fff);
     padding: var(--primary-padding);
+    margin: 0;
+    align-items: center;
     transition: padding 250ms ease-in-out,
                 height 1000ms ease-in-out,
                 opacity 100ms ease-in-out;
 }
 .footer-faq-question{
     font-size: var(--primary-font-size);
-    padding: var(--primary-padding) 0px;
+    padding: var(--primary-padding);
     justify-content: space-between;
+    margin: 0;
 }
 
 
@@ -479,7 +524,7 @@ input, textarea, button, select {
         --header-size: 3.8rem;
     }
 
-    .header-navbar > ul{
+    .header-navbar > .desk-ul{
         gap: 20px;
     }
     .header-container::after{
@@ -504,11 +549,19 @@ input, textarea, button, select {
         --primary-font-size: 1.3rem;
         --primary-padding: 1.2rem;
     }
-    .header-navbar > ul{
+    .header-navbar > .desk-ul{
         gap: 20px;
     }
     .main-content-section-aboutus .aboutus-image{
         max-width: 400px;
+    }
+
+    .header-navbar .header-logo{
+        max-width: 300px;
+    }
+
+    .nav-bar-scrolled .header-logo {
+        max-width: 250px;
     }
 
     .header-container::after{
@@ -532,12 +585,16 @@ input, textarea, button, select {
         --header-size: 3rem;
     }
 
-    .header-navbar > ul {
+    .header-navbar > .desk-ul {
         display: none;
     }
 
+    .menu-btn-container {
+        display: block;
+    }
+
     .main-content-section-aboutus .aboutus-image{
-        max-width: 400px;
+        max-width: 350px;
     }
 
     .main-content-section-aboutus .aboutus-inner-container {
@@ -556,8 +613,11 @@ input, textarea, button, select {
     }
 
     .form-container h2{
-        padding: 1em;
-        font-size: 2rem;
+        padding: 1.5rem;
+        font-size: 1.4rem;
+    }
+    .form-container .form-inputs{
+        padding: 0;
     }
 
     .footer-content-wrapper .footer-grid-wrapper {
@@ -568,7 +628,23 @@ input, textarea, button, select {
     }
 }
 
-@media (max-width : 425px){
+@media (max-width : 427px){
+    .padded-in{
+        padding: 0rem;
+    }
+
+    .header-navbar .header-logo{
+        max-width: 200px;
+    }
+
+    .main-content-section-vision > article p{
+        font-size: var(--primary-font-size);
+    }
+    .main-content-section-vision > article::after{
+        font-size: 5rem;
+        top: 20px;
+        right: 30px;
+    }
     .header-navbar .header-logo{
         max-width: 200px;
     }

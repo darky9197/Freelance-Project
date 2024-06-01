@@ -2,6 +2,7 @@
 
 const header = document.getElementById('nav-bar');
 const sectionOne = document.getElementById('homeSection');
+const navbg = document.getElementById('res_ul');
 
 const sectionOneOptions = {
     rootMargin : "-180px 0px 0px 0px"
@@ -10,9 +11,11 @@ const sectionOneObserver = new IntersectionObserver(function(entries,sectionOneO
     entries.forEach(e =>{
         if(!e.isIntersecting){
             header.classList.add('nav-bar-scrolled');
+            navbg.classList.add('bg-for-nav');
+
         }else{
             header.classList.remove('nav-bar-scrolled');
-
+            navbg.classList.remove('bg-for-nav');
         }
     });
 },sectionOneOptions);
@@ -135,5 +138,19 @@ faq_btn_3.addEventListener("click",()=>{
             service.classList.replace("show","hide");
             faq_btn_3.textContent = "+";
         }
+    }
+});
+
+// Navigation dispplay system
+
+const menu_btn = document.getElementById('menu-icon');
+
+menu_btn.addEventListener('click',()=>{
+    const service = document.getElementById('res_ul');
+    if(!service.classList.contains('activate_ul')){
+        service.classList.add('activate_ul');
+    }
+    else{
+        service.classList.remove('activate_ul');
     }
 });
