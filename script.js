@@ -1,3 +1,25 @@
+// <--Nav-bar Behavior change-->
+
+const header = document.getElementById('nav-bar');
+const sectionOne = document.getElementById('homeSection');
+
+const sectionOneOptions = {
+    rootMargin : "-180px 0px 0px 0px"
+};
+const sectionOneObserver = new IntersectionObserver(function(entries,sectionOneObserver){
+    entries.forEach(e =>{
+        if(!e.isIntersecting){
+            header.classList.add('nav-bar-scrolled');
+        }else{
+            header.classList.remove('nav-bar-scrolled');
+
+        }
+    });
+},sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne)
+
+
 // <--Services reveal system-->
 
 const ser_btn_1 =document.getElementById('service_btn_1');
@@ -115,25 +137,3 @@ faq_btn_3.addEventListener("click",()=>{
         }
     }
 });
-
-
-// <--Nav-bar Behavior change-->
-
-const header = document.getElementById('nav-bar');
-const sectionOne = document.getElementById('homeSection');
-
-const sectionOneOptions = {
-    rootMargin : "-180px 0px 0px 0px"
-};
-const sectionOneObserver = new IntersectionObserver(function(entries,sectionOneObserver){
-    entries.forEach(e =>{
-        if(!e.isIntersecting){
-            header.classList.add('nav-bar-scrolled');
-        }else{
-            header.classList.remove('nav-bar-scrolled');
-
-        }
-    });
-},sectionOneOptions);
-
-sectionOneObserver.observe(sectionOne)
