@@ -63,6 +63,7 @@ input, textarea, button, select {
 
 .flex {
     display: flex;
+    gap: 1.5rem;
     justify-content: space-between;
 }
 
@@ -148,26 +149,29 @@ input, textarea, button, select {
 
 .header-container{
     position: relative;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 .mobile-ul {
+    display: none;
     opacity: 0;
     position: absolute;
-    top: 130px;
+    top: 100px;
     left: 0;
     right: 0;
     line-height: 2;
     font-weight: 600;
-    padding: var(--primary-padding);
+    padding: 0;
     text-align: center;
     font-size: calc(var(--primary-font-size) + 5px);
     width: 100%;
     background-color: var(--primary-accent-clr-2);
-    transition: opacity 100ms ease-in;
+    transition: opacity 150ms ease-in,
+                padding 200ms ease-in-out;
 }
 .activate_ul{
     opacity: 1;
+    padding: var(--primary-padding);
 }
 .bg-for-nav{
     background-color: var(--primary-accent-clr);
@@ -349,7 +353,6 @@ input, textarea, button, select {
     border-radius: 0px 0px 20px 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    place-items: center;
     gap: 20px;
     transition: padding 150ms ease-in-out,
                 height 800ms ease-in-out,
@@ -508,6 +511,10 @@ input, textarea, button, select {
     margin: 0;
 }
 
+#faq_rev_btn_1,#faq_rev_btn_2,#faq_rev_btn_3 {
+    font-size: 1.4rem;
+}
+
 
 
 
@@ -593,6 +600,9 @@ input, textarea, button, select {
         display: block;
     }
 
+    .mobile-ul{
+        display: block;
+    }
     .main-content-section-aboutus .aboutus-image{
         max-width: 350px;
     }
@@ -610,6 +620,10 @@ input, textarea, button, select {
     }
     .section-services-card-contaier .inner-container {
         place-items: center;
+    }
+
+    .section-services-card-contaier .inner-container{
+        text-align: center;
     }
 
     .form-container h2{
