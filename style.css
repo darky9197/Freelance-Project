@@ -152,7 +152,7 @@ input, textarea, button, select {
     padding: var(--primary-padding);
     color: var(--primary-accent-clr);
     bottom: 20vh;
-    animation: homeBannerText 1500ms ease-in 1000ms;
+    animation: homeBannerText 1500ms ease-in;
 }
 
 @keyframes homeBannerText {
