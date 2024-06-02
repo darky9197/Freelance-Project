@@ -515,7 +515,7 @@ input, textarea, button, select {
 
 
 
-/* --Responsiveness Styling-- */
+/* <--Responsiveness Styling--> */
 
 @media (max-width : 1239px){
     :root{
@@ -582,6 +582,8 @@ input, textarea, button, select {
 
 }
 
+/* <--Mobile Styling--> */
+
 @media (max-width : 650px){
     :root{
         --primary-font-size: 1rem;
@@ -635,6 +637,8 @@ input, textarea, button, select {
         grid-column: span 2;
     }
 }
+
+
 
 @media (max-width : 427px){
     .padded-in{
