@@ -193,17 +193,17 @@ input, textarea, button, select {
     line-height: 1.2;
     padding: var(--primary-padding);
     color: var(--primary-accent-clr);
-    bottom: 20vh;
+    bottom: 15vh;
     animation: homeBannerText 1500ms ease-in;
 }
 
 @keyframes homeBannerText {
     from{
-        bottom: 15vh;
+        bottom: 10vh;
         opacity: 0;
     }
     to{
-        bottom: 20vh;
+        bottom: 15vh;
         opacity: 1;
     }
 }
