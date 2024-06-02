@@ -48,7 +48,7 @@ input, textarea, button, select {
     --color-100: #EEAF43;
     --color-150: #c6a33a8f;
     --color-200: #b57608;
-    --color-400: #043b8f;
+    --color-400: linear-gradient(#043b8f,#203453);
     --color-700: #102C57;
     --color-1000: #000000;
 
@@ -309,7 +309,7 @@ input, textarea, button, select {
 }
 
 .section-services-card-contaier {
-    background-color: var(--color-400);
+    background: var(--color-400);
     display: grid;
     grid-template-columns: 1fr 2fr;
     border-radius: 20px;
