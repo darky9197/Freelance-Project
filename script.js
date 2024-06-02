@@ -154,3 +154,13 @@ menu_btn.addEventListener('click',()=>{
         service.classList.remove('activate_ul');
     }
 });
+
+
+// <--Opening LinkedIn pages-->
+
+const linkbtn = document.getElementById('linkedin_target');
+
+linkbtn.onclick = function(){
+    window.open("https://www.linkedin.com/in/pugazhendhi-siva/",'_blank');
+    window.open("https://www.linkedin.com/in/asvithasivabalan2105/",'_blank'); 
+}
