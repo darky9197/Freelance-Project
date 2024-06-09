@@ -184,7 +184,7 @@ input, textarea, button, select {
 .header-container::after{
     content: 'We are one of the leading Exporters, Importers and Trading activities of  both sides and having started by vast experienced and passionate professionals, of more than two and half  decades, who offer their expertise for benefit of both sides.';
     position: absolute;
-    bottom: 10%;
+    bottom: 15vh;
     font-size: 2.6rem;
     font-weight: 700;
     font-family: 'Josefin Sans';
